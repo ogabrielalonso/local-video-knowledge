@@ -137,7 +137,8 @@ Speed depends on the computer. Measured with the default `large-v3-turbo` model 
 an Apple M4 and 16 GB of memory, transcription runs about four times faster than real time: a
 5 minute 41 second recording took 85 seconds. A one hour podcast takes about 15 minutes. The first
 run also downloads the model (about 1.6 GB). The agent reports progress and an estimate while it
-waits, and your computer stays usable meanwhile.
+waits, and your computer stays usable meanwhile. Heavy use at the same time (a video call, many
+browser tabs) slows it down: the same recording took about four and a half minutes during a call.
 
 ## Configuration
 
