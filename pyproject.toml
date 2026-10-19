@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-video-knowledge"
+version = "0.1.0"
+description = "Turn local video and audio recordings into thoroughly analyzed, connected Obsidian notes."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "imageio-ffmpeg>=0.6.0",
+    "faster-whisper>=1.1.0",
+    "numpy>=1.26",
+    "PyYAML>=6.0",
+    "markdown-it-py>=4.0,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+lvk = "local_video_knowledge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["local_video_knowledge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
